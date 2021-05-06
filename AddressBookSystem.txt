@@ -142,4 +142,25 @@ mysql> SELECT * FROM addressbook;
 4 rows in set (0.63 sec)
 
 *********************************************************************************************************************************************************
+UC6:- Ability to Retrieve Person belonging to a City or State from the Address Book
+
+
+mysql> SELECT * FROM addressbook WHERE city = 'Pune';
++------------+-----------+-------------------------+------+-------------+----------+--------------+--------------------+
+| first_name | last_name | address                 | city | state       | zip_code | phone_number | email              |
++------------+-----------+-------------------------+------+-------------+----------+--------------+--------------------+
+| Shaheen    | Miya      | Rainbow Environ Colony  | Pune | Maharashtra | 411001   | 9922167220   | shaheen5@gmail.com |
+| Shubham    | Kadam     | Vishrantwadi Kalas Road | Pune | Maharashtra | 411015   | 9321378220   | shubhs@yahoo.in    |
++------------+-----------+-------------------------+------+-------------+----------+--------------+--------------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT * FROM addressbook WHERE state = 'Maharashtra';
++------------+-----------+-------------------------+--------+-------------+----------+--------------+--------------------+
+| first_name | last_name | address                 | city   | state       | zip_code | phone_number | email              |
++------------+-----------+-------------------------+--------+-------------+----------+--------------+--------------------+
+| Rahul      | sharma    | Gandhi Nagar            | Mumbai | Maharashtra | 411015   | 9922789009   | rahul777@gmail.com |
+| Shaheen    | Miya      | Rainbow Environ Colony  | Pune   | Maharashtra | 411001   | 9922167220   | shaheen5@gmail.com |
+| Shubham    | Kadam     | Vishrantwadi Kalas Road | Pune   | Maharashtra | 411015   | 9321378220   | shubhs@yahoo.in    |
++------------+-----------+-------------------------+--------+-------------+----------+--------------+--------------------+
+3 rows in set (0.00 sec)
 
