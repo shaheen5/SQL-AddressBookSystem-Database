@@ -62,5 +62,28 @@ mysql> DESCRIBE addressbook;
 8 rows in set (2.72 sec)
 
 *************************************************************************************************************************************************************
+UC3 :- Ability to insert new Contacts to Address Book
 
+mysql> INSERT INTO addressbook VALUES
+    -> ('Shaheen','Miya','Rainbow Environ Colony','Pune','Maharashta','411001','9922178220','shaheen5@gmail.com'),
+    -> ('Uthsavi','Gowda','North Street','Bangalore','Karnataka','312031','7984578220','utsavi57@gmail.com'),
+    -> ('Rahul','sharma','Gandhi Nagar','Mumbai','Maharashtra','411015','9922789009','rahul777@gmail.com'),
+    -> ('Pallavi','Chaudhary','Kalyani Nagar','Ahmedabad','Gujarat','202100','7447438788','pallavi123@yahoo.in'),
+    -> ('Shubham','Kadam','Vishrantwadi Kalas Road','Pune','Maharashta','411015','9321378220','shubhs@yahoo.in');
+Query OK, 5 rows affected (0.60 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM addressbook;
++------------+-----------+-------------------------+-----------+-------------+----------+--------------+---------------------+
+| first_name | last_name | address                 | city      | state       | zip_code | phone_number | email               |
++------------+-----------+-------------------------+-----------+-------------+----------+--------------+---------------------+
+| Pallavi    | Chaudhary | Kalyani Nagar           | Ahmedabad | Gujarat     | 202100   | 7447438788   | pallavi123@yahoo.in |
+| Rahul      | sharma    | Gandhi Nagar            | Mumbai    | Maharashtra | 411015   | 9922789009   | rahul777@gmail.com  |
+| Shaheen    | Miya      | Rainbow Environ Colony  | Pune      | Maharashta  | 411001   | 9922178220   | shaheen5@gmail.com  |
+| Shubham    | Kadam     | Vishrantwadi Kalas Road | Pune      | Maharashta  | 411015   | 9321378220   | shubhs@yahoo.in     |
+| Uthsavi    | Gowda     | North Street            | Bangalore | Karnataka   | 312031   | 7984578220   | utsavi57@gmail.com  |
++------------+-----------+-------------------------+-----------+-------------+----------+--------------+---------------------+
+5 rows in set (0.91 sec)
+
+***************************************************************************************************************************************************************
 
