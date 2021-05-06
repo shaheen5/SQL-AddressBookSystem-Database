@@ -125,4 +125,21 @@ mysql> SELECT * FROM addressbook;
 5 rows in set (0.00 sec)
 
 ****************************************************************************************************************************************************************
+UC5 :- Ability to delete a person using person's name
+
+mysql> DELETE FROM addressbook WHERE first_name = 'Rahul';
+Query OK, 1 row affected (0.18 sec)
+
+mysql> SELECT * FROM addressbook;
++------------+-----------+-------------------------+-----------+------------+----------+--------------+---------------------+
+| first_name | last_name | address                 | city      | state      | zip_code | phone_number | email               |
++------------+-----------+-------------------------+-----------+------------+----------+--------------+---------------------+
+| Pallavi    | Chaudhary | Kalyani Nagar           | Ahmedabad | Gujarat    | 202100   | 7447438788   | pallavi123@yahoo.in |
+| Shaheen    | Miya      | Rainbow Environ Colony  | Pune      | Maharashta | 411001   | 9922167220   | shaheen5@gmail.com  |
+| Shubham    | Kadam     | Vishrantwadi Kalas Road | Pune      | Maharashta | 411015   | 9321378220   | shubhs@yahoo.in     |
+| Uthsavi    | Gowda     | North Street            | Bangalore | Karnataka  | 211222   | 7984578220   | utsavi57@gmail.com  |
++------------+-----------+-------------------------+-----------+------------+----------+--------------+---------------------+
+4 rows in set (0.63 sec)
+
+*********************************************************************************************************************************************************
 
