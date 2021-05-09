@@ -163,4 +163,22 @@ mysql> SELECT * FROM addressbook WHERE state = 'Maharashtra';
 | Shubham    | Kadam     | Vishrantwadi Kalas Road | Pune   | Maharashtra | 411015   | 9321378220   | shubhs@yahoo.in    |
 +------------+-----------+-------------------------+--------+-------------+----------+--------------+--------------------+
 3 rows in set (0.00 sec)
+**********************************************************************************************************************************************************
+UC7:- Ability to understand the size of address book by City and State
 
+mysql> SELECT COUNT(first_name) AS CITY_COUNT  FROM addressbook WHERE city= 'Pune';
++------------+
+| CITY_COUNT |
++------------+
+|          2 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(first_name) AS STATE_COUNT  FROM addressbook WHERE state= 'Maharashtra';
++-------------+
+| STATE_COUNT |
++-------------+
+|           3 |
++-------------+
+1 row in set (0.00 sec)
+**********************************************************************************************************************************************************
