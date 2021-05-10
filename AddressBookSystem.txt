@@ -217,3 +217,30 @@ mysql> SELECT * FROM addressbook WHERE state = 'Maharashtra' GROUP BY first_name
 +------------+-----------+-------------------------+--------+-------------+----------+--------------+--------------------+
 3 rows in set (0.00 sec)
 **********************************************************************************************************************************************************
+UC9:-Ability to identify each Address Book with name and Type.
+
+mysql> ALTER TABLE addressbook ADD COLUMN addressbook_name  VARCHAR(250) NOT NULL AFTER email;
+Query OK, 0 rows affected (1.90 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE addressbook ADD COLUMN type  VARCHAR(250) NOT NULL AFTER addressbook_name;
+Query OK, 0 rows affected (0.76 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe addressbook;
++------------------+--------------+------+-----+---------+-------+
+| Field            | Type         | Null | Key | Default | Extra |
++------------------+--------------+------+-----+---------+-------+
+| first_name       | varchar(20)  | NO   | PRI | NULL    |       |
+| last_name        | varchar(20)  | NO   |     | NULL    |       |
+| address          | varchar(50)  | NO   |     | NULL    |       |
+| city             | varchar(20)  | NO   |     | NULL    |       |
+| state            | varchar(20)  | NO   |     | NULL    |       |
+| zip_code         | varchar(6)   | NO   |     | NULL    |       |
+| phone_number     | varchar(20)  | NO   |     | NULL    |       |
+| email            | varchar(80)  | NO   |     | NULL    |       |
+| addressbook_name | varchar(250) | NO   |     | NULL    |       |
+| type             | varchar(250) | NO   |     | NULL    |       |
++------------------+--------------+------+-----+---------+-------+
+10 rows in set (0.20 sec)
+**********************************************************************************************************************************************************
