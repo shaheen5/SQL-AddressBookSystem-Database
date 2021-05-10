@@ -244,3 +244,27 @@ mysql> describe addressbook;
 +------------------+--------------+------+-----+---------+-------+
 10 rows in set (0.20 sec)
 **********************************************************************************************************************************************************
+UC10:- Ability to get number of contact persons i.e. count by type
+
+mysql> select * from addressbook;
++------------+-----------+-------------------------+-----------+-------------+----------+--------------+---------------------+------------------+------------+
+| first_name | last_name | address                 | city      | state       | zip_code | phone_number | email               | addressbook_name | type       |
++------------+-----------+-------------------------+-----------+-------------+----------+--------------+---------------------+------------------+------------+
+| Pallavi    | Chaudhary | Kalyani Nagar           | Ahmedabad | Gujarat     | 202100   | 7447438788   | pallavi123@yahoo.in | Book3            | Profession |
+| Rahul      | sharma    | Gandhi Nagar            | Mumbai    | Maharashtra | 411015   | 9922789009   | rahul777@gmail.com  | Book3            | Profession |
+| Shaheen    | Miya      | Rainbow Environ Colony  | Pune      | Maharashtra | 411001   | 9922167220   | shaheen5@gmail.com  | Book1            | Friends    |
+| Shubham    | Kadam     | Vishrantwadi Kalas Road | Pune      | Maharashtra | 411015   | 9321378220   | shubhs@yahoo.in     | Book1            | Friends    |
+| Uthsavi    | Gowda     | North Street            | Bangalore | Karnataka   | 211222   | 7984578220   | utsavi57@gmail.com  | Book2            | Family     |
++------------+-----------+-------------------------+-----------+-------------+----------+--------------+---------------------+------------------+------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT type,COUNT(type)AS COUNT FROM addressbook GROUP BY type;
++------------+-------+
+| type       | COUNT |
++------------+-------+
+| Profession |     2 |
+| Friends    |     2 |
+| Family     |     1 |
++------------+-------+
+3 rows in set (0.00 sec)
+**********************************************************************************************************************************************************
